@@ -48,58 +48,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="select_image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Yjh-TD-foK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="select_image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Yjh-TD-foK">
                                 <rect key="frame" x="16" y="103" width="361" height="230"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="90a-Em-PlG">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="90a-Em-PlG">
                                 <rect key="frame" x="16" y="359" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Artist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DlQ-yw-q3W">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Artist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DlQ-yw-q3W">
                                 <rect key="frame" x="16" y="409" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgs-HF-csH">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgs-HF-csH">
                                 <rect key="frame" x="166" y="526" width="61" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonClicked:" destination="Goz-cb-vjp" eventType="touchUpInside" id="1dE-2G-4zm"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dJ3-ym-NDu">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dJ3-ym-NDu">
                                 <rect key="frame" x="16" y="463" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Wj8-it-W2U"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Yjh-TD-foK" firstAttribute="leading" secondItem="90a-Em-PlG" secondAttribute="leading" id="0cH-Wi-vom"/>
-                            <constraint firstItem="90a-Em-PlG" firstAttribute="top" secondItem="Yjh-TD-foK" secondAttribute="bottom" constant="26" id="3ra-KE-ELj"/>
-                            <constraint firstItem="Yjh-TD-foK" firstAttribute="leading" secondItem="FOp-ON-V6J" secondAttribute="leadingMargin" id="4V4-Uw-hxW"/>
-                            <constraint firstItem="90a-Em-PlG" firstAttribute="trailing" secondItem="DlQ-yw-q3W" secondAttribute="trailing" id="5cC-Gm-7B7"/>
-                            <constraint firstItem="Rgs-HF-csH" firstAttribute="top" secondItem="dJ3-ym-NDu" secondAttribute="bottom" constant="29" id="7uP-i7-mC0"/>
-                            <constraint firstItem="Yjh-TD-foK" firstAttribute="top" secondItem="Wj8-it-W2U" secondAttribute="top" id="GGV-SM-s5d"/>
-                            <constraint firstItem="DlQ-yw-q3W" firstAttribute="centerY" secondItem="FOp-ON-V6J" secondAttribute="centerY" id="HYa-b1-qzE"/>
-                            <constraint firstItem="DlQ-yw-q3W" firstAttribute="top" secondItem="90a-Em-PlG" secondAttribute="bottom" constant="16" id="PlZ-SW-kBu"/>
-                            <constraint firstItem="90a-Em-PlG" firstAttribute="leading" secondItem="DlQ-yw-q3W" secondAttribute="leading" id="Pts-fe-yip"/>
-                            <constraint firstItem="DlQ-yw-q3W" firstAttribute="trailing" secondItem="dJ3-ym-NDu" secondAttribute="trailing" id="Sh3-PX-K3P"/>
-                            <constraint firstItem="Yjh-TD-foK" firstAttribute="trailing" secondItem="FOp-ON-V6J" secondAttribute="trailingMargin" id="Srl-Ri-JoE"/>
-                            <constraint firstItem="dJ3-ym-NDu" firstAttribute="centerX" secondItem="Rgs-HF-csH" secondAttribute="centerX" id="Yfz-SK-efu"/>
-                            <constraint firstItem="dJ3-ym-NDu" firstAttribute="top" secondItem="DlQ-yw-q3W" secondAttribute="bottom" constant="20" id="fLD-JG-Hvu"/>
-                            <constraint firstItem="DlQ-yw-q3W" firstAttribute="leading" secondItem="dJ3-ym-NDu" secondAttribute="leading" id="s76-Ul-Xh6"/>
-                            <constraint firstItem="Yjh-TD-foK" firstAttribute="trailing" secondItem="90a-Em-PlG" secondAttribute="trailing" id="w41-On-ehV"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OCz-Xp-jvv"/>
                     <connections>
                         <outlet property="artistText" destination="DlQ-yw-q3W" id="KlR-La-e75"/>
                         <outlet property="imageView" destination="Yjh-TD-foK" id="AZa-Tc-ztd"/>
                         <outlet property="nameText" destination="90a-Em-PlG" id="Fx3-66-9Iu"/>
+                        <outlet property="saveButton" destination="Rgs-HF-csH" id="6np-6D-ULC"/>
                         <outlet property="yearText" destination="dJ3-ym-NDu" id="hBF-Rl-v3n"/>
                     </connections>
                 </viewController>
