@@ -8,14 +8,18 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
-    
-    
+    @IBOutlet weak var nameText: UITextField!
+    @IBOutlet weak var noteText: UITextField!
+    var chosenLatitude = Double()
+    var chosenLongitude = Double()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,10 +41,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             let touchedPoint = gestureRecognizer.location(in: self.mapView)
             let touchedCoordinates = self.mapView.convert(touchedPoint, toCoordinateFrom: self.mapView)
             
+            
+            
             let annotation = MKPointAnnotation()
             annotation.coordinate = touchedCoordinates
-            annotation.title = "New Annotation"
-            annotation.subtitle = "Travel Book"
+            annotation.title = nameText.text
+            annotation.subtitle = noteText.text
             self.mapView.addAnnotation(annotation)
         }
         
@@ -55,9 +61,35 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         mapView.setRegion(region, animated: true)
         
-        
-         
     }
+    
+    @IBAction func saveButtonClicked(_ sender: Any) {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let newPlace = NSEntityDescription.insertNewObject(forEntityName: "Places", into: context)
+        
+        if nameText.text?.isEmpty == true || noteText.text?.isEmpty == true || chosenLatitude == nil || chosenLongitude == nil {
+            let alert = UIAlertController(title: "Hata", message: "Lütfen tüm alanları doldurun ve konumu seçin.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        } else {
+            newPlace.setValue(nameText.text, forKey: "title")
+            newPlace.setValue(noteText.text, forKey: "subtitle")
+            newPlace.setValue(chosenLatitude, forKey: "latitude")
+            newPlace.setValue(chosenLongitude, forKey: "longitude")
+            newPlace.setValue(UUID(), forKey: "id")
+        }
+        
+        do{
+            try context.save()
+            print("success")
+        } catch {
+            print("error")
+        }
 
+        
+    }
+    
 }
 

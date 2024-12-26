@@ -17,27 +17,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Xp-D4-QCQ">
+                                <rect key="frame" x="16" y="84" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9k8-qA-Ahw">
+                                <rect key="frame" x="16" y="134" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMd-Md-6ro">
+                                <rect key="frame" x="166" y="743" width="61" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iGw-q2-E8q"/>
+                                </connections>
+                            </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0HK-mm-910">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="185" width="393" height="550"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0HK-mm-910" secondAttribute="bottom" id="Wfs-hj-Mer"/>
-                            <constraint firstItem="0HK-mm-910" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fWk-qC-J8r"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0HK-mm-910" secondAttribute="trailing" id="kpG-5p-NaI"/>
-                            <constraint firstItem="0HK-mm-910" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pQQ-zu-u9B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SMd-Md-6ro" secondAttribute="bottom" constant="40" id="1u0-Ir-yR2"/>
+                            <constraint firstItem="7Xp-D4-QCQ" firstAttribute="leading" secondItem="9k8-qA-Ahw" secondAttribute="leading" id="3Ig-bY-Vq2"/>
+                            <constraint firstItem="7Xp-D4-QCQ" firstAttribute="trailing" secondItem="9k8-qA-Ahw" secondAttribute="trailing" id="3J4-m8-eDf"/>
+                            <constraint firstItem="SMd-Md-6ro" firstAttribute="top" secondItem="0HK-mm-910" secondAttribute="bottom" constant="8" id="5O0-dR-rT0"/>
+                            <constraint firstItem="7Xp-D4-QCQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ACH-ht-xE5"/>
+                            <constraint firstItem="0HK-mm-910" firstAttribute="centerX" secondItem="SMd-Md-6ro" secondAttribute="centerX" id="I6q-U2-Pls"/>
+                            <constraint firstItem="7Xp-D4-QCQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="Zsw-Vp-aXR"/>
+                            <constraint firstItem="9k8-qA-Ahw" firstAttribute="top" secondItem="7Xp-D4-QCQ" secondAttribute="bottom" constant="16" id="dIa-J4-ZNr"/>
+                            <constraint firstItem="7Xp-D4-QCQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jnY-jr-BKc"/>
+                            <constraint firstItem="0HK-mm-910" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rsf-Mr-l5N"/>
+                            <constraint firstItem="0HK-mm-910" firstAttribute="top" secondItem="9k8-qA-Ahw" secondAttribute="bottom" constant="17" id="smI-lM-p4t"/>
+                            <constraint firstItem="9k8-qA-Ahw" firstAttribute="centerX" secondItem="0HK-mm-910" secondAttribute="centerX" id="zeO-Xp-g6r"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="0HK-mm-910" id="4Mi-Xd-GcM"/>
+                        <outlet property="nameText" destination="7Xp-D4-QCQ" id="4eK-PS-bKv"/>
+                        <outlet property="noteText" destination="9k8-qA-Ahw" id="R5J-Jd-nWy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131" y="-27"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
