@@ -11,7 +11,7 @@
         <!--Upload-->
         <scene sceneID="ayH-ER-Yag">
             <objects>
-                <viewController id="odM-yJ-rgP" customClass="UploadViewController" sceneMemberID="viewController">
+                <viewController id="odM-yJ-rgP" customClass="UploadViewController" customModule="FirebaseInstaClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ppl-vc-ecF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Upload"/>
                                 <connections>
-                                    <action selector="actionButtonClicked:" destination="odM-yJ-rgP" eventType="touchUpInside" id="yO9-y6-s8r"/>
+                                    <action selector="actionButtonClicked:" destination="odM-yJ-rgP" eventType="touchUpInside" id="H9J-GB-ZWq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -41,9 +41,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="u.circle.fill" catalog="system" id="70x-PK-qFN"/>
                     <connections>
-                        <outlet property="commentText" destination="mVX-pb-wq4" id="eon-M7-gWE"/>
-                        <outlet property="imageView" destination="h5n-fH-nRT" id="w2x-d9-uEF"/>
-                        <outlet property="uploadButton" destination="hjw-53-OMk" id="BLN-pb-DMj"/>
+                        <outlet property="commentText" destination="mVX-pb-wq4" id="fXc-M4-k4m"/>
+                        <outlet property="imageView" destination="h5n-fH-nRT" id="Z6E-6K-duj"/>
+                        <outlet property="uploadButton" destination="hjw-53-OMk" id="J0B-3i-Wvq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7O-ID-Dd8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frJ-TK-inq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1106" y="958"/>
+            <point key="canvasLocation" x="-2108" y="946"/>
         </scene>
         <!--Feed-->
         <scene sceneID="2aV-ti-H4M">
@@ -87,14 +87,26 @@
                     <view key="view" contentMode="scaleToFill" id="Fn1-qv-Qlg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKw-ha-Q5i">
+                                <rect key="frame" x="175" y="104" width="42" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3J2-g1-xAh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="f.circle.fill" catalog="system" id="6wz-8j-w9g"/>
+                    <connections>
+                        <outlet property="label" destination="LKw-ha-Q5i" id="9sL-5J-cMF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZu-Nb-6eX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1106" y="-331"/>
+            <point key="canvasLocation" x="-1106.1068702290077" y="-331.69014084507046"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2Yq-Ua-gfu">
